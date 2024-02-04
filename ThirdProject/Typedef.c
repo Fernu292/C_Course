@@ -18,6 +18,13 @@ typedef int* i_pointer;
 // typedef vs #define
 // #define Counter int; has the same results as using typedef 
 
+// Defining an array of 10 numbers
+
+typedef int array[10];
+
+// Definning an string 
+
+typedef char *string;
 
 int main(){
     
@@ -26,6 +33,21 @@ int main(){
     i_pointer *matrix; // same as int **matrix
     
     i_pointer myArray[10]; // same as int *myarray[10];
+    
+    string str = "Hola";
+    array arr1;
+    
+    printf("\n\t %s\n", str);
+
+    for(int i=0;i<10;i++){
+        arr1[i] = i;
+    }
+
+    printf("\n\t ");
+
+    for(int i=0;i<10;i++){
+        printf("%d ", arr1[i]);
+    }
 
     printf("\n\t Direction of memory %d, value of number %d\n\n", ptr, *ptr);
 
